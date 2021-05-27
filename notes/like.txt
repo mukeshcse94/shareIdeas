@@ -1,0 +1,36 @@
+1.Create post: 
+(POST)http://localhost:5000/api/posts
+{
+    "textOfThePost": "textOfThePost"
+}
+
+
+2.List of POST: (GET)http://localhost:5000/api/posts/posts
+
+3.Most recent post: (GET)http://localhost:5000/api/posts/posts/the_most_recent
+
+4.Search_for_post: (PUT)http://localhost:5000/api/posts/search_for_post
+
+5.Find likes: (PUT)http://localhost:5000/api/posts/likes/60ae9be566ccd00af0bbf6a4
+
+6.add_comment: (PUT)http://localhost:5000/api/posts/add_comment/60ae9c6066ccd00af0bbf6a7
+{
+    "textOfTheComment": "searchInput"
+}
+
+
+7.like_comment: (/like_comment/:post_id/:comment_id)
+(PUT)http://localhost:5000/api/posts/like_comment/60ae9c6066ccd00af0bbf6a7/60ae9c6066ccd00af0bbf6a7
+
+8.delete_post: (DELETE)http://localhost:5000/api/posts/delete_post/60af63372eba3a13b881a73f
+
+9.remove_like_from_post: (/remove_like_from_post/:post_id/:like_id)
+(DELETE)http://localhost:5000/api/posts/remove_like_from_post/60ae9c6066ccd00af0bbf6a7/60ae9c6066ccd00af0bbf6a7
+
+10.remove_comment: (/remove_comment/:post_id/:comment_id)
+(DELETE)http://localhost:5000/api/posts/remove_comment/60ae9c6066ccd00af0bbf6a7/60ae9c6066ccd00af0bbf6a7
+
+11.remove_like_from_comment: (/remove_like_from_comment/:post_id/:comment_id/:like_id)
+(DELETE)http://localhost:5000/api/posts/remove_like_from_comment/60ae9c6066ccd00af0bbf6a7/60ae9c6066ccd00af0bbf6a7/60ae9c6066ccd00af0bbf6a7
+
+

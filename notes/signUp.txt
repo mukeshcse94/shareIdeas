@@ -1,0 +1,52 @@
+1.(POST): http://localhost:5000/api/users/register
+{
+    "name": "user",
+    "lastName": "lastName",
+    "userName": "userName",
+    "email": "user7@gmail.com",
+    "password": "1234567"
+}
+
+2.(POST): http://localhost:5000/api/users/login
+{
+    "name": "user",
+    "lastName": "lastName",
+    "userName": "userName",
+    "email": "user7@gmail.com",
+    "password": "1234567"
+}
+
+in header authentication-token at place of x-auth-token
+3.list of users: (GET)http://localhost:5000/api/users/users
+4.particular user: (GET)http://localhost:5000/api/users
+
+
+5.get user by email: (GET)http://localhost:5000/api/users/get_user_by_email/mukesh7@gmail.com
+6.get user by id: (GET)http://localhost:5000/api/users/get_user_by_id/60ae9b9566ccd00af0bbf6a2
+
+
+7.Search by user name: (PUT)
+http://localhost:5000/api/users/search_by_username
+{
+    "userNameFromSearch": "user@gmail.com"
+}
+
+
+8.Change user data: (PUT)
+http://localhost:5000/api/users/change_user_data/name
+{
+    "changeUserData": "sssssssssssssssssssss"
+}
+
+
+9.Change user password: 
+(PUT)http://localhost:5000/api/users/check_acutal_password
+{
+    "passwordToCheck": "mukeshs"
+}
+
+http://localhost:5000/api/users/change_user_password
+{
+    "newPassword": "mukeshs"
+}
+

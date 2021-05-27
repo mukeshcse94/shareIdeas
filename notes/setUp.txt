@@ -1,0 +1,24 @@
+Plugins:
+cdnSnippets
+Material Icon Theme
+Prettier - Code formatter
+
+
+https://bootswatch.com/
+Lux Theme download(bootstrap.min.css)
+import in index.js(import './bootstrap.min.css')
+
+
+React Bootstrap
+
+
+Setting => in search(format) => Editor: Format On Save(checked)
+
+
+import css without . in tab.
+
+https://cdnjs.com/ : for font-awesome
+
+
+find git url: git config --get remote.origin.url
+
