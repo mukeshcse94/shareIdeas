@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { clearPost } from "../actions/posts.actions/posts.actions/clearPost";
-import { getPost } from "../actions/posts.actions/posts.actions/getPost";
-import { removeLikeFromPost } from "../actions/posts.actions/likes.actions/removeLikeFromPost";
-import { addLikeToTopicPage } from "../actions/posts.actions/likes.actions/addLikeToTopicPage";
-import { createComment } from "../actions/posts.actions/comments.actions/createComment";
+import { clearPost } from "../actions/postsActions/postsActions/clearPost";
+import { getPost } from "../actions/postsActions/postsActions/getPost";
+import { removeLikeFromPost } from "../actions/postsActions/likesActions/removeLikeFromPost";
+import { addLikeToTopicPage } from "../actions/postsActions/likesActions/addLikeToTopicPage";
+import { createComment } from "../actions/postsActions/commentsActions/createComment";
 import Spinner from "../Spinner";
 import CommentsWrapper from "./Comments/CommentsWrapper";
 import TopicSection from "./TopicPosts/TopicSection";

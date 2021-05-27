@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Form, Button } from 'react-bootstrap';
+
 
 const CreatePost = ({ createPost }) => {
   let [textOfThePost, setTextOfThePost] = useState("");
@@ -52,18 +54,25 @@ const CreatePost = ({ createPost }) => {
       </ul>
 
       <form>
-        <textarea
+        {/* <textarea
           type="text"
           value={textOfThePost}
           onChange={(e) => onChange(e)}
-        />
+        /> */}
+
+      </form>
+
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Control as="textarea" rows={3} value={textOfThePost}
+            onChange={(e) => onChange(e)} />
+        </Form.Group>
         <div
           onClick={() => submitData()}
-          className="app_color_background add-post-button font__p font__bold"
         >
-          Add post
+          <Button variant="primary">Add post</Button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 };

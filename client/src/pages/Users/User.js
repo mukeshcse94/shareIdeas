@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Card } from 'react-bootstrap';
 
 const User = ({ user }) => {
   return (
-    <div className="topic-wrapper">
-      <div className="topic-user">
-        <img src={user.avatar} className="topic-avatar" alt="" />
-        <p className="font__p p__size">{user.userName}</p>
-      </div>
-
-      <div className="topic-section">
-        <div className="topic-section-links">
-          <div className="link-to-post-page-button app_color_background font__p font__bold p__size">
-            <Link to={`/users/user/${user._id}`}>View Profile</Link>
-          </div>
+    <div>
+      <Card style={{ width: '25rem' }}>
+        <div className="topic-user">
+          <Card.Img variant="top" src={user.avatar} className="topic-avatar" alt="" />
         </div>
-      </div>
+        <Card.Body>
+          <Card.Title><p className="font__p p__size">{user.userName}</p></Card.Title>
+        </Card.Body>
+
+        <Card.Body>
+          <Card.Link href="#"><Link to={`/users/user/${user._id}`}>View Profile</Link></Card.Link>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createPost } from "../actions/posts.actions/posts.actions/createPost";
-import { clearPost } from "../actions/posts.actions/posts.actions/clearPost";
+import { createPost } from "../actions/postsActions/postsActions/createPost";
+import { clearPost } from "../actions/postsActions/postsActions/clearPost";
 import CreatePost from "../components/AddPost/CreatePost";
 import Output from "../components/AddPost/Output";
 

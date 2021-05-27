@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Form, Button } from 'react-bootstrap';
+
 
 const TopicPageForm = ({ auth, createComment, post }) => {
   let [textOfTheComment, setTextOfTheComment] = useState("");
@@ -16,21 +18,18 @@ const TopicPageForm = ({ auth, createComment, post }) => {
         Create Post
       </p>
 
-      <textarea
-        value={textOfTheComment}
-        onChange={(e) => onChange(e)}
-        type="text"
-      />
+      <Form>
+        <Form.Group className="mb-6" controlId="exampleForm.ControlTextarea1">
+          <Form.Control as="textarea" rows={3} value={textOfTheComment}
+            onChange={(e) => onChange(e)} />
+        </Form.Group>
+      </Form>
 
-      <div
-        className="topic-search-button app_color_background font__p font__bold"
+      <Button variant="primary"
         onClick={() => {
           createComment(textOfTheComment, post._id);
           setTextOfTheComment("");
-        }}
-      >
-        Add comment
-      </div>
+        }}>Add comment</Button>
     </form>
   );
 };

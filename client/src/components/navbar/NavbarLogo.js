@@ -6,7 +6,7 @@ const NavbarLogo = () => {
   return (
     <div className="logo-wrapper">
       <Link to="/">
-        <img src={successity} alt="" />
+        {/* <img src={successity} alt="" /> */}
       </Link>
     </div>
   );

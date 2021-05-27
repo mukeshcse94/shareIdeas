@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getUserById } from "../actions/users.actions/getUserById";
-import { getUserPostsById } from "../actions/users.actions/getUserPostsById";
+import { getUserById } from "../actions/usersActions/getUserById";
+import { getUserPostsById } from "../actions/usersActions/getUserPostsById";
 import Spinner from "../Spinner";
 import UserPostsWrapper from "./UserPosts/UserPostsWrapper";
 import UserProfileData from "../components/userProfile/UserProfileData";

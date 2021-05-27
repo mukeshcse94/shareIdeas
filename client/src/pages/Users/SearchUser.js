@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { getUsers } from "../../actions/users.actions/getUsers";
-import { searchByUsername } from "../../actions/users.actions/searchByUsername";
+import { getUsers } from "../../actions/usersActions/getUsers";
+import { searchByUsername } from "../../actions/usersActions/searchByUsername";
 
 const SearchUser = () => {
   let [searchedUsername, setSearchedUsername] = useState("");
