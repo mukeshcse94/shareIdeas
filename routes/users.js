@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const authentication = require("../middleware/authentication");
-const getUserByMiddleware = require("../functions/userFunctions/getUserByMiddleware");
-const getUserByEmail = require("../functions/userFunctions/getUserByEmail");
-const getUsers = require("../functions/userFunctions/getUsers");
-const getUserById = require("../functions/userFunctions/getUserById");
-const registerUser = require("../functions/userFunctions/registerUser");
-const loginUser = require("../functions/userFunctions/loginUser");
+const getUserByMiddleware = require("../controllers/userControllers/getUserByMiddleware");
+const getUserByEmail = require("../controllers/userControllers/getUserByEmail");
+const getUsers = require("../controllers/userControllers/getUsers");
+const getUserById = require("../controllers/userControllers/getUserById");
+const registerUser = require("../controllers/userControllers/registerUser");
+const loginUser = require("../controllers/userControllers/loginUser");
 
 const {
   registerUserValidator,
@@ -16,10 +16,12 @@ const {
   checkActualPasswordValidator,
   changeUserPasswordValidator,
 } = require("../middleware/express-validator/expressValidator");
-const searchUserByUsername = require("../functions/userFunctions/searchUserByUsername");
-const changeUserData = require("../functions/userFunctions/changeUserData");
-const checkActualPassword = require("../functions/userFunctions/checkActualPassword");
-const changeUserPassword = require("../functions/userFunctions/changeUserPassword");
+
+const searchUserByUsername = require("../controllers/userControllers/searchUserByUsername");
+const changeUserData = require("../controllers/userControllers/changeUserData");
+const checkActualPassword = require("../controllers/userControllers/checkActualPassword");
+const changeUserPassword = require("../controllers/userControllers/changeUserPassword");
+
 
 router.get("/", authentication, getUserByMiddleware);
 
@@ -33,14 +35,9 @@ router.post("/register", registerUserValidator, registerUser);
 
 router.post("/login", loginUserValidator, loginUser);
 
-router.put(
-  "/search_by_username",
-  searchUserByUsernameValidator,
-  searchUserByUsername
-);
+router.put("/search_by_username", searchUserByUsernameValidator, searchUserByUsername);
 
-router.put(
-  "/change_user_data/:user_data_to_change",
+router.put("/change_user_data/:user_data_to_change",
   authentication,
   changeUserDataValidator,
   changeUserData
@@ -59,5 +56,6 @@ router.put(
   changeUserPasswordValidator,
   changeUserPassword
 );
+
 
 module.exports = router;

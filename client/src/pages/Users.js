@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getUsers } from "../actions/users.actions/getUsers";
+import { getUsers } from "../actions/usersActions/getUsers";
 import UsersWrapper from "./Users/UsersWrapper";
 import SearchUser from "./Users/SearchUser";
 

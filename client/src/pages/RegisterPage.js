@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { registerUser } from "../actions/auth.actions/registerUser";
+import { registerUser } from "../actions/authActions/registerUser";
 import { connect } from "react-redux";
 import ErrorMessage from "../components/ErrorMessage";
 

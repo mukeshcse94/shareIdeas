@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { removePost } from "../../actions/posts.actions/posts.actions/removePost";
+import { removePost } from "../../actions/postsActions/postsActions/removePost";
 import Spinner from "../../Spinner";
 import Moment from "react-moment";
 

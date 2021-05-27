@@ -1,0 +1,21 @@
+if data fetch from backend than setUp proxy server in fronend, than close frontend and backend
+server. Now Run backend first then frontend.
+
+
+Data modeling (data modelling) is the process of creating a data model for the data to be 
+stored in a database. This data model is a conceptual representation of Data objects, the 
+associations between different data objects, and the rules.
+
+seeder: npm run data:import
+        npm run data:destroy -d
+
+
+npm install express-async-handler: without using try...catch custom middleware apply 
+async...await
+
+browser: http://localhost:5000/api/products
+
+
+custom error implement by middleware
+https://medium.com/@selvaganesh93/how-node-js-middleware-works-d8e02a936113
+

@@ -1,8 +1,8 @@
 import React from "react";
 import Moment from "react-moment";
 import { connect } from "react-redux";
-import { removeLikeFromComment } from "../../actions/posts.actions/likes.actions/removeLikeFromComment";
-import { addLikeToComment } from "../../actions/posts.actions/likes.actions/addLikeToComment";
+import { removeLikeFromComment } from "../../actions/postsActions/likesActions/removeLikeFromComment";
+import { addLikeToComment } from "../../actions/postsActions/likesActions/addLikeToComment";
 import Spinner from "../../Spinner";
 
 const Comment = ({

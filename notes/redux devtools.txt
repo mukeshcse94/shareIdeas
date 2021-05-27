@@ -1,0 +1,9 @@
+React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the 
+dependency 
+
+inside useEffect in [] write a declare constant as
+const dispatch = useDispatch();
+
+useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch])
