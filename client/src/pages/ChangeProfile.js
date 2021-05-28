@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { changeUserData } from "../actions/authActions/changeUserData";
 import ErrorMessage from "../components/ErrorMessage";
+import { Form, Button } from 'react-bootstrap';
 
 const ChangeProfile = ({ changeUserData, posts: { errors } }) => {
   let [dataType, setDataType] = useState("");
@@ -40,27 +41,22 @@ const ChangeProfile = ({ changeUserData, posts: { errors } }) => {
       ) : (
         <form className="change-profile-section">
           <p className="font__bold font__p p__size">Add new {dataType}</p>
-          <input
-            onChange={(e) => {
-              setNewUserData(e.target.value);
-            }}
-            type="text"
-            placeholder="Type something..."
-            className="change-profile-input"
-          />
+          <Form.Group>
+            <Form.Control size="lg" type="text" placeholder="Type something..."
+              onChange={(e) => {
+                setNewUserData(e.target.value);
+              }}
+              className="change-profile-input"
+            />
+          </Form.Group>
 
           {errors && isTextError && (
             <ErrorMessage errorMessage="Something went wrong..." />
           )}
 
           <div className="change-profile-buttons-wrapper">
-            <div className="change-profile-btn" onClick={() => sendData()}>
-              Submit
-            </div>
-
-            <div className="change-profile-btn" onClick={() => resetSentData()}>
-              Go back
-            </div>
+            <Button variant="primary" className="change-profile-btn" onClick={() => sendData()}>Submit</Button>
+            <Button variant="primary" className="change-profile-btn" onClick={() => resetSentData()}>Go back</Button>
           </div>
         </form>
       )}

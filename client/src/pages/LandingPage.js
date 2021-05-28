@@ -8,7 +8,7 @@ const LandingPage = () => {
       <div className="text-wrapper">
         <div className="text-header-wrapper">
           <p className="text-header font__p p__size">Welcome in</p>
-          <span>Successity! </span>
+          <span>ShareIdeas! </span>
         </div>
 
         <div className="text-section font__p p__size">

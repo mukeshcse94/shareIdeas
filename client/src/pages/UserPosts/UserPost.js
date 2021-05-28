@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { removePost } from "../../actions/postsActions/postsActions/removePost";
 import Spinner from "../../Spinner";
 import Moment from "react-moment";
+import { Card, Button } from 'react-bootstrap';
 
 const UserPost = ({ post, removePost, auth }) => {
   return post === null || !post ? (
@@ -12,13 +13,17 @@ const UserPost = ({ post, removePost, auth }) => {
     </div>
   ) : (
     <div className="user-post">
-      <div className="user-post-date">
-        <Moment format="HH:mm YYYY-MM-DD">{post.date}</Moment>
-      </div>
-
-      <div className="user-post-topic">
-        <p className="font__p font__bold">{post.textOfThePost}</p>
-      </div>
+      <Card>
+        <div className="user-post-date">
+          <Moment format="HH:mm YYYY-MM-DD">{post.date}</Moment>
+        </div>
+        <Card.Body>
+          <Card.Title>{post.textOfThePost}</Card.Title>
+          <Card.Text>
+            With supporting text below as a natural lead-in to additional content.
+            </Card.Text>
+        </Card.Body>
+      </Card>
 
       <div className="post__likes__comments__deleteBtn-wrapper">
         <div className="post__likes__comments__deleteBtn">
@@ -36,16 +41,13 @@ const UserPost = ({ post, removePost, auth }) => {
             }}
           >
             <div
-              className="removePostBtn app_color_background"
               onClick={() => removePost(post._id)}
             >
               <i className="fas fa-times"></i>
             </div>
           </div>
 
-          <div className="link-to-post-page-button app_color_background font__p font__bold p__size">
-            <Link to={`/topics/topic/${post._id}`}>View More</Link>
-          </div>
+          <Link to={`/topics/topic/${post._id}`}><Button variant="primary">View More</Button></Link>
         </div>
       </div>
     </div>

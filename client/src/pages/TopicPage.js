@@ -42,9 +42,9 @@ const TopicPage = ({
         <TopicPageForm auth={auth} post={post} createComment={createComment} />
       </div>
 
-      <div className="comments-align-left">
-        <CommentsWrapper comments={post.comments} />
-      </div>
+      {/* <div className="comments-align-left"> */}
+      <CommentsWrapper comments={post.comments} />
+      {/* </div> */}
     </div>
   );
 };

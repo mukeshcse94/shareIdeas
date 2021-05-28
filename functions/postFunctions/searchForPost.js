@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator");
-const Post = require("../../schemas/Post");
+const Post = require("../../models/Post");
 
 module.exports = async (req, res) => {
   const { searchInput } = req.body;

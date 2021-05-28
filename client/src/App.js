@@ -22,6 +22,12 @@ import PrivateRoute from "./routes/PrivateRoute";
 import "./App.css";
 import ChangePassword from "./pages/ChangePassword";
 
+import AlbumList from "./components/images/AlbumList";
+import AddAlbum from "./components/images/AddAlbum";
+import UploadImage from "./components/images/UploadImage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 if (localStorage.getItem("token")) {
   setAuthenticationToken(localStorage.getItem("token"));
 }
@@ -33,6 +39,7 @@ const App = () => {
   return (
     <Router>
       <Provider store={store}>
+        <ToastContainer />
         <Navbar />
         <Switch>
           <Route path="/" exact component={LandingPage} />
@@ -42,6 +49,11 @@ const App = () => {
           <Route path="/users/user/:user_id" exact component={UserProfile} />
           <Route path="/topics/topic/:topic_id" exact component={TopicPage} />
           <IsLoggedInRoute path="/register" exact component={RegisterPage} />
+
+          <Route path="/AlbumList" exact component={AlbumList} />
+          <Route path="/add" exact component={AddAlbum} />
+          <Route path="/upload/:id" exact component={UploadImage} />
+
           <IsLoggedInRoute path="/login" exact component={LoginPage} />
           <PrivateRoute
             path="/change-password"

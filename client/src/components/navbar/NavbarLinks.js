@@ -14,11 +14,13 @@ const NavbarLinks = ({ isLoggedIn, logOut }) => {
           </Form>
 
           <Nav className="mr-auto">
-            <Nav.Link><Link to="/users" className="href__style__remove nav__link">Users
-            <i className="fas fa-users"></i></Link></Nav.Link>
+            <Nav.Link><Link to="/users" className="href__style__remove nav__link"
+              style={{ display: isLoggedIn ? "flex" : "none" }}>
+              <i className="fas fa-users"></i></Link>Users</Nav.Link>
 
-            <Nav.Link><Link to="/topics" className="href__style__remove nav__link">Topics
-            <i className="fas fa-comments"></i></Link></Nav.Link>
+            <Nav.Link><Link to="/topics" className="href__style__remove nav__link"
+              style={{ display: isLoggedIn ? "flex" : "none" }}>
+              <i className="fas fa-comments"></i></Link>Topics</Nav.Link>
 
             <Nav.Link><Link to="/login" className="href__style__remove nav__link"
               style={{ display: isLoggedIn ? "none" : "flex" }}>Log In</Link></Nav.Link>
@@ -30,27 +32,29 @@ const NavbarLinks = ({ isLoggedIn, logOut }) => {
             <Nav.Link><Link to="/account"
               className="href__style__remove nav__link"
               style={{ display: isLoggedIn ? "flex" : "none" }}>
-              Account <i className="fas fa-address-card"></i>
-            </Link></Nav.Link>
+              <i className="fas fa-address-card"></i>
+            </Link>Account</Nav.Link>
 
             <Nav.Link><Link to="/dashboard"
               className="href__style__remove nav__link"
               style={{ display: isLoggedIn ? "flex" : "none" }}>
-              Dashboard <i className="fas fa-user"></i>
-            </Link></Nav.Link>
+              <i className="fas fa-user"></i>
+            </Link>Dashboard</Nav.Link>
 
             <Nav.Link><Link to="/add-post"
               className="href__style__remove nav__link"
               style={{ display: isLoggedIn ? "flex" : "none" }}>
-              Add question <i className="fas fa-edit"></i>
-            </Link></Nav.Link>
+              <i className="fas fa-edit"></i>
+            </Link>Add question</Nav.Link>
 
             <Nav.Link><Link to="/login"
               className="href__style__remove nav__link"
               onClick={() => logOut()}
               style={{ display: isLoggedIn ? "flex" : "none" }}>
-              Log Out <i className="fas fa-sign-out-alt"></i>
-            </Link></Nav.Link>
+              <i className="fas fa-sign-out-alt"></i>
+            </Link>Log Out</Nav.Link>
+
+            <Link to="/AlbumList">Upload</Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
