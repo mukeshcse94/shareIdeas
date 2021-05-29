@@ -32,6 +32,7 @@ import Forget from './forgetPassword/forget';
 import StripPays from './strip/stripePays';
 // import SocialSignin from "./socialSigin";
 // import WebRtc from './webRtc/webRtc';
+import Recapcha from './recapcha/recapcha';
 
 if (localStorage.getItem("token")) {
   setAuthenticationToken(localStorage.getItem("token"));
@@ -63,6 +64,7 @@ const App = () => {
           <Route path="/stripePays" exact component={StripPays} />
           {/* <Route path="/socialSigin" exact component={SocialSignin} /> */}
           {/* <Route path="/webRtc" exact component={WebRtc} /> */}
+          <Route path="/recapcha" exact component={Recapcha} />
 
           <IsLoggedInRoute path="/login" exact component={LoginPage} />
           <PrivateRoute

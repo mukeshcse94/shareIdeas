@@ -22,6 +22,7 @@ app.use("/api/users", require("./routes/users.js"));
 app.use("/galleries", require("./routes/gallery"));
 app.use("/stripe", require("./stripePays"));
 app.use("/webRtc", require("./webRtc"));
+app.use("/recapcha", require("./recapcha"));
 
 app.use("./uploads", express.static("uploads"));
 

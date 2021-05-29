@@ -52,7 +52,11 @@ const LoginPage = ({ loginUser, error }) => {
             </Link>
 
             <Link to="/forget" style={{ marginLeft: 30 }}>
-              <p className="p__size font__p password__info">forget password</p>
+              <p className="p__size font__p password__info">Forget password</p>
+            </Link>
+
+            <Link to="/recapcha" style={{ marginLeft: 30 }}>
+              <p className="p__size font__p password__info">Recapcha</p>
             </Link>
           </div>
 
