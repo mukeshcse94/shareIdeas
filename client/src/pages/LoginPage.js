@@ -50,7 +50,12 @@ const LoginPage = ({ loginUser, error }) => {
             <Link to="/register">
               <p className="p__size font__p password__info">Sign up</p>
             </Link>
+
+            <Link to="/forget" style={{ marginLeft: 30 }}>
+              <p className="p__size font__p password__info">forget password</p>
+            </Link>
           </div>
+
           {error && (error !== null || error !== "" || error !== {}) && (
             <ErrorMessage errorMessage="Wrong e-mail or password" />
           )}

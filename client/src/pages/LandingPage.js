@@ -1,6 +1,9 @@
 import React from "react";
 import successity from "../successity.png";
 import { Link } from "react-router-dom";
+// import SocialSignin from '../socialSigin';
+import StripPays from '../strip/stripePays';
+
 
 const LandingPage = () => {
   return (
@@ -10,7 +13,7 @@ const LandingPage = () => {
           <p className="text-header font__p p__size">Welcome in</p>
           <span>ShareIdeas! </span>
         </div>
-
+        {/* <SocialSignin /> */}
         <div className="text-section font__p p__size">
           It is new forum about achieving success
           <br />
@@ -21,6 +24,7 @@ const LandingPage = () => {
             <li>How to improve yourself every day</li>
             <li>or You just want to share Your story</li>
           </ul>
+
           <div className="text-button-wrapper">
             <Link to="/register">Register in</Link> and add post!
           </div>
@@ -29,6 +33,7 @@ const LandingPage = () => {
       <div className="image-wrapper">
         <img src={successity} className="landing-image" alt="" />
       </div>
+      <StripPays />
     </div>
   );
 };

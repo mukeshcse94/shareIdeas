@@ -22,3 +22,8 @@ https://cdnjs.com/ : for font-awesome
 
 find git url: git config --get remote.origin.url
 
+inside client: npx create-react-app .
+outside client: npx create-react-app /client
+
+
+"proxy": "https://warm-wildwood-81069.herokuapp.com",

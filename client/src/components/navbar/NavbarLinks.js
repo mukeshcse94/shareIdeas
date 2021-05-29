@@ -54,7 +54,8 @@ const NavbarLinks = ({ isLoggedIn, logOut }) => {
               <i className="fas fa-sign-out-alt"></i>
             </Link>Log Out</Nav.Link>
 
-            <Link to="/AlbumList">Uploads</Link>
+            <Nav.Link><Link to="/AlbumList">Uploads</Link></Nav.Link>
+            <Nav.Link><Link to="/socialSigin">Social Login</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

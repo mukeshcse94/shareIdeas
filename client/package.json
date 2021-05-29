@@ -4,11 +4,13 @@
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "axios": "^0.19.2",
     "firebase": "^8.6.3",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.6.0",
+    "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.3.2",
     "react-loader-spinner": "^3.1.14",
@@ -16,10 +18,13 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "0.9.5",
+    "react-stripe-checkout": "^2.6.3",
     "react-toastify": "^7.0.4",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "simple-peer": "^9.11.0",
+    "socket.io-client": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

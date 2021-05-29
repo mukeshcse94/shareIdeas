@@ -28,6 +28,11 @@ import UploadImage from "./components/images/UploadImage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Forget from './forgetPassword/forget';
+import StripPays from './strip/stripePays';
+// import SocialSignin from "./socialSigin";
+// import WebRtc from './webRtc/webRtc';
+
 if (localStorage.getItem("token")) {
   setAuthenticationToken(localStorage.getItem("token"));
 }
@@ -52,7 +57,12 @@ const App = () => {
 
           <Route path="/AlbumList" exact component={AlbumList} />
           <Route path="/add" exact component={AddAlbum} />
+
           <Route path="/upload/:id" exact component={UploadImage} />
+          <Route path="/forget" exact component={Forget} />
+          <Route path="/stripePays" exact component={StripPays} />
+          {/* <Route path="/socialSigin" exact component={SocialSignin} /> */}
+          {/* <Route path="/webRtc" exact component={WebRtc} /> */}
 
           <IsLoggedInRoute path="/login" exact component={LoginPage} />
           <PrivateRoute
