@@ -29,10 +29,19 @@ const LandingPage = () => {
             <Link to="/register">Register in</Link> and add post!
           </div>
         </div>
+        <Link to="/userForm">confirm</Link>
+        <br />
+        <Link to="/reactShare">share</Link>
+        <br />
+        <Link to="/paginations">Paginations</Link>
+        <br />
+        <Link to="/snapsort">SnapSort</Link>
       </div>
       <div className="image-wrapper">
         <img src={successity} className="landing-image" alt="" />
+        <Link to="/radioBtn">Button</Link>
       </div>
+
       <StripPays />
     </div>
   );

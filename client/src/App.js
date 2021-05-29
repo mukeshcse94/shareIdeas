@@ -33,6 +33,11 @@ import StripPays from './strip/stripePays';
 // import SocialSignin from "./socialSigin";
 // import WebRtc from './webRtc/webRtc';
 import Recapcha from './recapcha/recapcha';
+import RadioBtn from './radio/radioBtn';
+import UserForm from './stepForm/userForm';
+import ReactShare from './sharejs/reactShare';
+import Paginations from './paginations/paginations';
+import SnapSort from './snapSort/snapsort';
 
 if (localStorage.getItem("token")) {
   setAuthenticationToken(localStorage.getItem("token"));
@@ -65,6 +70,11 @@ const App = () => {
           {/* <Route path="/socialSigin" exact component={SocialSignin} /> */}
           {/* <Route path="/webRtc" exact component={WebRtc} /> */}
           <Route path="/recapcha" exact component={Recapcha} />
+          <Route path="/radioBtn" exact component={RadioBtn} />
+          <Route path="/userForm" exact component={UserForm} />
+          <Route path="/reactShare" exact component={ReactShare} />
+          <Route path="/paginations" exact component={Paginations} />
+          <Route path="/snapsort" exact component={SnapSort} />
 
           <IsLoggedInRoute path="/login" exact component={LoginPage} />
           <PrivateRoute

@@ -23,6 +23,8 @@ app.use("/galleries", require("./routes/gallery"));
 app.use("/stripe", require("./stripePays"));
 app.use("/webRtc", require("./webRtc"));
 app.use("/recapcha", require("./recapcha"));
+app.use('/radioBtn', require('./routes/radioBtn'));
+app.use('/posts', require('./pagination'));
 
 app.use("./uploads", express.static("uploads"));
 

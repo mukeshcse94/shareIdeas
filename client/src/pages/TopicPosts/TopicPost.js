@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import { addLikeToPost } from "../../actions/postsActions/likesActions/addLikeToPost";
 import { removeLikeFromTopicPost } from "../../actions/postsActions/likesActions/removeLikeFromTopicPost";
+// import ReactShare from '../../sharejs/reactShare';
 
 const TopicPost = ({
   isTheOldest,
