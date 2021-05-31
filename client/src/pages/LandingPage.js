@@ -31,15 +31,16 @@ const LandingPage = () => {
         </div>
         <Link to="/userForm">confirm</Link>
         <br />
-        <Link to="/reactShare">share</Link>
-        <br />
         <Link to="/paginations">Paginations</Link>
         <br />
         <Link to="/snapsort">SnapSort</Link>
+        <br />
+        <Link to="/AlbumList">Uploads</Link>
+        <br />
+        <Link to="/socialSigin">Social Login</Link>
       </div>
       <div className="image-wrapper">
         <img src={successity} className="landing-image" alt="" />
-        <Link to="/radioBtn">Button</Link>
       </div>
 
       <StripPays />

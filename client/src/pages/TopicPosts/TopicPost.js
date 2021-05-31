@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import { addLikeToPost } from "../../actions/postsActions/likesActions/addLikeToPost";
 import { removeLikeFromTopicPost } from "../../actions/postsActions/likesActions/removeLikeFromTopicPost";
-// import ReactShare from '../../sharejs/reactShare';
+import ReactShare from '../../sharejs/reactShare';
 
 const TopicPost = ({
   isTheOldest,
@@ -81,9 +81,10 @@ const TopicPost = ({
                 {post.comments.length}
               </div></Card.Link>
 
-              {/* <div className="link-to-post-page-button app_color_background font__p font__bold p__size">
-                <Link to={`/topics/topic/${post._id}`}>View more</Link>
-              </div> */}
+              <div className="link-to-post-page-button app_color_background font__p font__bold p__size">
+                <Link to={`/topics/topic/${post._id}`}>comment</Link>
+              </div>
+              <ReactShare />
             </div>
           </div>
         </Card.Body>

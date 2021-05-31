@@ -28,11 +28,11 @@ function AddAlbum(props) {
   return (
     <Fragment>
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
             <a href="/">Albums</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">
+          <li className="breadcrumb-item active" aria-current="page">
             Add
           </li>
         </ol>
@@ -67,7 +67,7 @@ function AddAlbum(props) {
               onClick={handleSubmit}
               className="btn btn-success"
             >
-              <i class="fas fa-plus"></i> Save and next
+              <i className="fas fa-plus"></i> Save and next
             </button>
           </div>
         </div>

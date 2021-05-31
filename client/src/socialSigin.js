@@ -9,7 +9,7 @@ function SocialSignin() {
   };
 
   return (
-    <div>
+    <div>ssssssssssss
       <button onClick={() => handleOnClick(facebookProvider)}>facebook</button>
       <button onClick={() => handleOnClick(googleProvider)}>google</button>
       <button onClick={() => handleOnClick(githubProvider)}>github</button>

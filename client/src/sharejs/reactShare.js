@@ -15,7 +15,7 @@ class ReactShare extends Component {
             title={title}
             facebook={true}
             facebookClass="iconStyle"
-            googlePlus={true}
+            // googlePlus={true}
             googlePlusClass="iconStyle"
             twitter={true}
             twitterClass="iconStyle"

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 
+
 const User = ({ user }) => {
   return (
     <div>
@@ -11,6 +12,7 @@ const User = ({ user }) => {
         </div>
         <Card.Body>
           <Card.Title><p className="font__p p__size">{user.userName}</p></Card.Title>
+          <Link to='/radioBtn'>type</Link>
         </Card.Body>
 
         <Card.Body>

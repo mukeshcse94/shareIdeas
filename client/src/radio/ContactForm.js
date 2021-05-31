@@ -5,6 +5,9 @@ const ContactForm = () => {
   const contactContext = useContext(GlobalContext);
 
   const { addContact, updateContact, clearCurrent, current } = contactContext;
+  const [contact, setContact] = useState({ name: '', type: 'personal' });
+  const { name, type } = contact;
+
 
   useEffect(() => {
     if (current !== null) {
@@ -14,11 +17,14 @@ const ContactForm = () => {
     }
   }, [contactContext, current]);
 
-  const [contact, setContact] = useState({ name: '', type: 'personal' });
-  const { name, type } = contact;
 
   const onChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
+
+
+  const clearAll = () => {
+    clearCurrent();
+  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -30,13 +36,11 @@ const ContactForm = () => {
     clearAll();
   };
 
-  const clearAll = () => {
-    clearCurrent();
-  };
+
 
   return (
     <form onSubmit={onSubmit}>
-      <p className='text-primary' style={{ paddingTop: 20 }}>{current ? 'Edit Radio' : 'Add Radio'}</p>
+      <p className='text-primary' style={{ paddingTop: 20 }}>{current ? 'Edit User' : 'Add User'}</p>
       <input type='text' placeholder='Name' name='name' value={name} onChange={onChange} />
 
       <input type='radio' name='type' value='personal' checked={type === 'personal'}

@@ -16,15 +16,15 @@ const Topics = ({
   searchTopics,
   posts,
 }) => {
-  let [dataFromSearch, setDataFromSearch] = useState("");
-  let [topicsSortType, setTopicsSortType] = useState({
+  const [dataFromSearch, setDataFromSearch] = useState("");
+  const [topicsSortType, setTopicsSortType] = useState({
     isTheOldest: false,
     isTheMostRecent: true,
     isTheMostCommented: false,
     isTheMostLiked: false,
   });
 
-  let {
+  const {
     isTheMostCommented,
     isTheOldest,
     isTheMostLiked,

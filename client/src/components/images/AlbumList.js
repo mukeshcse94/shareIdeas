@@ -20,8 +20,8 @@ function AlbumList() {
         </a>
       </div>
       <div className="card-body p-4">
-        <table class="table border">
-          <thead class="table-dark">
+        <table className="table border">
+          <thead className="table-dark">
             <tr>
               <td>No</td>
               <td>Album Name</td>
@@ -38,8 +38,8 @@ function AlbumList() {
                 <td>{album.description}</td>
                 <td>{album.images.length}</td>
                 <td>
-                  <a class="btn btn-info" href={`/upload/${album._id}`}>
-                    <i class="fas fa-image"></i>
+                  <a className="btn btn-info" href={`/upload/${album._id}`}>
+                    <i className="fas fa-image"></i>
                   </a>
                 </td>
               </tr>

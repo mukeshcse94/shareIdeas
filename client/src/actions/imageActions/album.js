@@ -9,6 +9,7 @@ import {
 
 export const fetchAlbums = () => {
   const req = axios.get("/galleries").then((res) => res.data);
+  console.log('ddddd', req)
   return {
     type: FETCH_ALBUMS,
     payload: req,

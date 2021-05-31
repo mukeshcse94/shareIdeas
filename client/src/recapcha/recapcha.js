@@ -29,23 +29,23 @@ const Recapcha = () => {
       .catch(err => console.log(err))
   }
 
-  const subscribeForm = (e) => {
-    e.preventDefault();
-    setInitial({ [initial]: e.target.value })
-  }
+  // const subscribeForm = (e) => {
+  //   e.preventDefault();
+  //   setInitial({ [initial]: e.target.value })
+  // }
   return (
     <div>
       <h1>Subscribe</h1>
       <form id="subscribeForm">
-        <div class="form-group">
+        <div className="form-group">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" class="form-control" />
+          <input type="text" name="name" id="name" className="form-control" />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="email">Email</label>
-          <input type="text" name="email" id="email" class="form-control" />
+          <input type="text" name="email" id="email" className="form-control" />
         </div>
-        <input type="submit" value="Submit" class="btn btn-primary" />
+        <input type="submit" value="Submit" className="btn btn-primary" />
       </form>
 
       <ReCAPTCHA

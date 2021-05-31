@@ -40,11 +40,11 @@ function UploadImage(props) {
   return (
     <div>
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
             <a href="/">Albums</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">
+          <li className="breadcrumb-item active" aria-current="page">
             Upload
           </li>
         </ol>
@@ -85,13 +85,13 @@ function UploadImage(props) {
                       className="btn btn-danger float-end"
                       onClick={() => handleDelete(albumId, image)}
                     >
-                      <i class="fas fa-backspace"></i>
+                      <i className="fas fa-backspace"></i>
                     </button>
                   </div>
                   <div className="card-body p-1">
                     <img
                       style={{ width: "100%", maxHeight: "180px" }}
-                      class="img-thumbnail"
+                      className="img-thumbnail"
                       src={`http://localhost:5000/${image}`}
                     />
                   </div>
